@@ -55,9 +55,9 @@ class ApplicantController extends Controller
         request()->image->move(public_path('images'), $imageName);
         
         $applicant = new Applicant([
-            'first_name' => $request->get('product_name'),
-            'surnname' => $request->get('description'),
-            'email' => $request->get('price'),
+            'first_name' => $request->get('first_name'),
+            'surnname' => $request->get('surname'),
+            'email' => $request->get('email'),
             'image_name' => $imageName,
             'phonenumber' => $request->get('phonenumber'),
             'resume_file_name' => $resumeFileName,
@@ -65,7 +65,7 @@ class ApplicantController extends Controller
             
     
         ]);
-        return back()->with('success','You have successfully added a new product.');
+        return back()->with('success','You have successfully added a new applicant.');
 
     }
 
