@@ -48,7 +48,7 @@ class ApplicantController extends Controller
         ]);
        
         $imageName = time().'.'.request()->image->getClientOriginalExtension();
-        $resumeFileName = $request->file('select_file')->getClientOriginalName();
+        $resumeFileName = $request->file('resume_file_name')->getClientOriginalName();
 
   
 
